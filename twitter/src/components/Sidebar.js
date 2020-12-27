@@ -17,8 +17,8 @@ import {
 function Sidebar() {
   return (
     <div className='sidebar'>
-      <Twitter />
-      <SidebarOption Icon={Home} text='Home' />
+      <Twitter className='sidebar__twitterIcon' />
+      <SidebarOption Icon={Home} active={true} text='Home' />
       <SidebarOption Icon={Search} text='Explore' />
       <SidebarOption Icon={NotificationsNone} text='Notifications' />
       <SidebarOption Icon={MailOutline} text='Messages' />
@@ -26,7 +26,9 @@ function Sidebar() {
       <SidebarOption Icon={ListAlt} text='List' />
       <SidebarOption Icon={PermIdentity} text='Profile' />
       <SidebarOption Icon={MoreHoriz} text='More' />
-      <Button>Tweet</Button>
+      <Button variant='outlined' className='sidebar__tweet' fullWidth>
+        Tweet
+      </Button>
     </div>
   );
 }
